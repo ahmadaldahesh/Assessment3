@@ -4,7 +4,13 @@ using UnityEngine;
 
 public class LevelGenerator : MonoBehaviour
 {
+    public Transform outsideCorner;
     public Transform outsideWall;
+    public Transform insideCorner;
+    public Transform insideWall;
+    public Transform standardPellet;
+    public Transform powerPellet;
+    public Transform tJunction;
     
     int[,] levelMap =
     {
@@ -28,7 +34,34 @@ public class LevelGenerator : MonoBehaviour
  // Start is called before the first frame update
     void Start()
     {
-        Instantiate(outsideWall, transform.position, transform.rotation);
+        //Instantiate(outsideWall, transform.position = new Vector3(-1f, -1f, -1f), Quaternion.Euler(0f, 0f, 90f));
+
+        for(int row = 0; row < levelMap.GetLength(0); row++)
+        {
+            for(int col = 0; col < levelMap.GetLength(1); col++)
+            {
+                // Debug.Log(levelMap[col,row]);
+
+                if(row == 0)
+                {
+                    switch(levelMap[row, col])
+                    {
+                        case 1:
+                            Debug.Log("CASE IS 1");
+                            Instantiate(outsideCorner, transform.position = new Vector3((col - 13), (row + 14), 0), transform.rotation);
+                            break;
+                        case 2:
+                            Instantiate(outsideWall, transform.position = new Vector3((col - 13), (row + 14), 0), Quaternion.Euler(0f, 0f, 90f));
+                            break;
+                        case 7:
+                            Instantiate(tJunction, transform.position = new Vector3((col - 13), (row + 14), 0), transform.rotation);
+                            break;
+                    }
+                }
+            }
+        }
+
+
     }
 
     // Update is called once per frame

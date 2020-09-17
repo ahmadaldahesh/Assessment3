@@ -4,7 +4,19 @@ MonoImporter:
   externalObjects: {}
   serializedVersion: 2
   defaultReferences:
+  - outsideCorner: {fileID: 8104496851207743127, guid: 8d7b80ef08a3f614fb2b74de4825c377,
+      type: 3}
   - outsideWall: {fileID: 8636779593209860327, guid: 3164fd0cfe37e2a4eaded29269f2fadf,
+      type: 3}
+  - insideCorner: {fileID: 5148652506400947653, guid: 540b139c4237f30489b86324bb30f2fe,
+      type: 3}
+  - insideWall: {fileID: 7175292573976439109, guid: de79bfc794646484898eabd11a85608b,
+      type: 3}
+  - standardPellet: {fileID: 6442838875733330488, guid: 52dbf9f4d9973fc4a95fe0f20898f3d4,
+      type: 3}
+  - powerPellet: {fileID: 9121603938319405553, guid: d243ab70c7b457641883c2e0aea4ba64,
+      type: 3}
+  - tJunction: {fileID: 5255126206855520273, guid: f313b56419e9dcd44af7ae376a02de9d,
       type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
