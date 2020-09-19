@@ -1127,15 +1127,13 @@ public class LevelGenerator : MonoBehaviour
                     switch(levelMap[row, col])
                     {
                         case 1:
-                            Transform oC = Instantiate(outsideCorner, transform.position = new Vector3((col*-1 + 14), (row - 14), 0), transform.rotation);
-                            oC.transform.localScale = new Vector3(transform.localScale.x, transform.localScale.y*-1, transform.localScale.z);
+                            Instantiate(outsideCorner, transform.position = new Vector3((col*-1 + 14), (row - 14), 0), Quaternion.Euler(0f, 0f, 180f));
                             break;
                         case 2:
                             Instantiate(outsideWall, transform.position = new Vector3((col*-1 + 14), (row - 14), 0), Quaternion.Euler(0f, 0f, 90f));
                             break;
                         case 7:
-                            Transform tJ = Instantiate(tJunction, transform.position = new Vector3((col*-1 + 14), (row - 14), 0), transform.rotation);
-                            tJ.transform.localScale = new Vector3(transform.localScale.x, transform.localScale.y*-1, transform.localScale.z);
+                            Instantiate(tJunction, transform.position = new Vector3((col*-1 + 14), (row - 14), 0), Quaternion.Euler(0f, 0f, 180f));
                             break;
                     }
                 }
@@ -1150,7 +1148,7 @@ public class LevelGenerator : MonoBehaviour
                             Instantiate(standardPellet, transform.position = new Vector3((col*-1 + 14), (row - 14), 0), transform.rotation);
                             break;
                         case 4:
-                            Instantiate(insideWall, transform.position = new Vector3((col*-1 + 14), (row - 14), 0), transform.rotation);
+                            Instantiate(insideWall, transform.position = new Vector3((col*-1 + 14), (row - 14), 0), Quaternion.Euler(0f, 0f, 180f));
                             break;
                     }
                 }
@@ -1167,18 +1165,18 @@ public class LevelGenerator : MonoBehaviour
                         case 3:
                             if(col == 5 || col == 11)
                             {
-                                Transform iC = Instantiate(insideCorner, transform.position = new Vector3((col*-1 + 14), (row - 14), 0), Quaternion.Euler(0f, 0f, 90f));
+                                Transform iC = Instantiate(insideCorner, transform.position = new Vector3((col*-1 + 14), (row - 14), 0), transform.rotation);
                                 iC.transform.localScale = new Vector3(transform.localScale.x, transform.localScale.y*-1, transform.localScale.z);
                             }
                             else
                             {
-                                Transform iC = Instantiate(insideCorner, transform.position = new Vector3((col*-1 + 14), (row - 14), 0), transform.rotation);
+                                Transform iC = Instantiate(insideCorner, transform.position = new Vector3((col*-1 + 14), (row - 14), 0), Quaternion.Euler(0f, 0f, 90f));
                                 iC.transform.localScale = new Vector3(transform.localScale.x, transform.localScale.y*-1, transform.localScale.z);
                             }
                             break;
                         case 4:
                             if(col == 13)
-                                Instantiate(insideWall, transform.position = new Vector3((col*-1 + 14), (row - 14), 0), transform.rotation);
+                                Instantiate(insideWall, transform.position = new Vector3((col*-1 + 14), (row - 14), 0), Quaternion.Euler(0f, 0f, 180f));
                             else
                                 Instantiate(insideWall, transform.position = new Vector3((col*-1 + 14), (row - 14), 0), Quaternion.Euler(0f, 0f, 90f));
                             break;
@@ -1196,9 +1194,9 @@ public class LevelGenerator : MonoBehaviour
                             break;
                         case 4:
                             if(col == 5 || col == 11)
-                                Instantiate(insideWall, transform.position = new Vector3((col*-1 + 14), (row - 14), 0), Quaternion.Euler(0f, 0f, 180f));
-                            else
                                 Instantiate(insideWall, transform.position = new Vector3((col*-1 + 14), (row - 14), 0), transform.rotation);
+                            else
+                                Instantiate(insideWall, transform.position = new Vector3((col*-1 + 14), (row - 14), 0), Quaternion.Euler(0f, 0f, 180f));
                             break;
                         case 0:
                             break;
@@ -1220,12 +1218,12 @@ public class LevelGenerator : MonoBehaviour
                         case 3:
                             if(col == 5 || col == 11)
                             {
-                                Transform iC = Instantiate(insideCorner, transform.position = new Vector3((col*-1 + 14), (row - 14), 0), Quaternion.Euler(0f, 0f, 180f));
+                                Transform iC = Instantiate(insideCorner, transform.position = new Vector3((col*-1 + 14), (row - 14), 0), Quaternion.Euler(0f, 0f, -90f));
                                 iC.transform.localScale = new Vector3(transform.localScale.x, transform.localScale.y*-1, transform.localScale.z);
                             }
                             else
                             {
-                                Transform iC = Instantiate(insideCorner, transform.position = new Vector3((col*-1 + 14), (row - 14), 0), Quaternion.Euler(0f, 0f, -90f));
+                                Transform iC = Instantiate(insideCorner, transform.position = new Vector3((col*-1 + 14), (row - 14), 0), Quaternion.Euler(0f, 0f, 180f));
                                 iC.transform.localScale = new Vector3(transform.localScale.x, transform.localScale.y*-1, transform.localScale.z);
                             }
                             break;
@@ -1259,12 +1257,12 @@ public class LevelGenerator : MonoBehaviour
                         case 3:
                             if(col == 5 || col == 8)
                             {
-                                Transform iC = Instantiate(insideCorner, transform.position = new Vector3((col*-1 + 14), (row - 14), 0), Quaternion.Euler(0f, 0f, 90f));
+                                Transform iC = Instantiate(insideCorner, transform.position = new Vector3((col*-1 + 14), (row - 14), 0), transform.rotation);
                                 iC.transform.localScale = new Vector3(transform.localScale.x, transform.localScale.y*-1, transform.localScale.z);
                             }
                             else
                             {
-                                Transform iC = Instantiate(insideCorner, transform.position = new Vector3((col*-1 + 14), (row - 14), 0), transform.rotation);
+                                Transform iC = Instantiate(insideCorner, transform.position = new Vector3((col*-1 + 14), (row - 14), 0), Quaternion.Euler(0f, 0f, 90f));
                                 iC.transform.localScale = new Vector3(transform.localScale.x, transform.localScale.y*-1, transform.localScale.z);
                             }
                             break;
@@ -1286,25 +1284,25 @@ public class LevelGenerator : MonoBehaviour
                         case 3:
                             if(col == 5)
                             {
-                                Transform iC = Instantiate(insideCorner, transform.position = new Vector3((col*-1 + 14), (row - 14), 0), Quaternion.Euler(0f, 0f, 180f));
+                                Transform iC = Instantiate(insideCorner, transform.position = new Vector3((col*-1 + 14), (row - 14), 0), Quaternion.Euler(0f, 0f, -90f));
                                 iC.transform.localScale = new Vector3(transform.localScale.x, transform.localScale.y*-1, transform.localScale.z);
                             }
                             else if(col == 2 || col == 10)
                             {
-                                Transform iC = Instantiate(insideCorner, transform.position = new Vector3((col*-1 + 14), (row - 14), 0), Quaternion.Euler(0f, 0f, -90f));
+                                Transform iC = Instantiate(insideCorner, transform.position = new Vector3((col*-1 + 14), (row - 14), 0), Quaternion.Euler(0f, 0f, 180f));
                                 iC.transform.localScale = new Vector3(transform.localScale.x, transform.localScale.y*-1, transform.localScale.z);
                             }
                             else
                             {
-                                Transform iC = Instantiate(insideCorner, transform.position = new Vector3((col*-1 + 14), (row - 14), 0), transform.rotation);
+                                Transform iC = Instantiate(insideCorner, transform.position = new Vector3((col*-1 + 14), (row - 14), 0), Quaternion.Euler(0f, 0f, 90f));
                                 iC.transform.localScale = new Vector3(transform.localScale.x, transform.localScale.y*-1, transform.localScale.z);
                             }
                             break;
                         case 4:
                             if(col == 7)
-                                Instantiate(insideWall, transform.position = new Vector3((col*-1 + 14), (row - 14), 0), transform.rotation);
-                            else if(col == 8)
                                 Instantiate(insideWall, transform.position = new Vector3((col*-1 + 14), (row - 14), 0), Quaternion.Euler(0f, 0f, 180f));
+                            else if(col == 8)
+                                Instantiate(insideWall, transform.position = new Vector3((col*-1 + 14), (row - 14), 0), transform.rotation);
                             else
                                 Instantiate(insideWall, transform.position = new Vector3((col*-1 + 14), (row - 14), 0), Quaternion.Euler(0f, 0f, -90f));
                             break;
@@ -1322,9 +1320,9 @@ public class LevelGenerator : MonoBehaviour
                             break;
                         case 4:
                             if(col == 8)
-                                Instantiate(insideWall, transform.position = new Vector3((col*-1 + 14), (row - 14), 0), Quaternion.Euler(0f, 0f, 180f));
-                            else
                                 Instantiate(insideWall, transform.position = new Vector3((col*-1 + 14), (row - 14), 0), transform.rotation);
+                            else
+                                Instantiate(insideWall, transform.position = new Vector3((col*-1 + 14), (row - 14), 0), Quaternion.Euler(0f, 0f, 180f));
                             break;
                     }
                 }
@@ -1334,9 +1332,9 @@ public class LevelGenerator : MonoBehaviour
                     {
                         case 1:
                             if(col == 5)
-                                Instantiate(outsideCorner, transform.position = new Vector3((col*-1 + 14), (row - 14), 0), Quaternion.Euler(0f, 0f, 180f));
+                                Instantiate(outsideCorner, transform.position = new Vector3((col*-1 + 14), (row - 14), 0), Quaternion.Euler(0f, 0f, 90f));
                             else
-                                Instantiate(outsideCorner, transform.position = new Vector3((col*-1 + 14), (row - 14), 0), Quaternion.Euler(0f, 0f, 0f));
+                                Instantiate(outsideCorner, transform.position = new Vector3((col*-1 + 14), (row - 14), 0), Quaternion.Euler(0f, 0f, -90f));
                             break;                        
                         case 2:
                             Instantiate(outsideWall, transform.position = new Vector3((col*-1 + 14), (row - 14), 0), Quaternion.Euler(0f, 0f, 90f));
@@ -1346,19 +1344,19 @@ public class LevelGenerator : MonoBehaviour
                             break;
                         case 4:
                             if(col == 7 || col == 13)
-                                Instantiate(insideWall, transform.position = new Vector3((col*-1 + 14), (row - 14), 0), transform.rotation);
+                                Instantiate(insideWall, transform.position = new Vector3((col*-1 + 14), (row - 14), 0), Quaternion.Euler(0f, 0f, 180f));
                             else
                                 Instantiate(insideWall, transform.position = new Vector3((col*-1 + 14), (row - 14), 0), Quaternion.Euler(0f, 0f, 90f));
                             break;
                         case 3:
                             if(col == 8)
                             {
-                                Transform iC = Instantiate(insideCorner, transform.position = new Vector3((col*-1 + 14), (row - 14), 0), transform.rotation);
+                                Transform iC = Instantiate(insideCorner, transform.position = new Vector3((col*-1 + 14), (row - 14), 0), Quaternion.Euler(0f, 0f, 90f));
                                 iC.transform.localScale = new Vector3(transform.localScale.x, transform.localScale.y*-1, transform.localScale.z);
                             }
                             else
                             {
-                                Transform iC = Instantiate(insideCorner, transform.position = new Vector3((col*-1 + 14), (row - 14), 0), Quaternion.Euler(0f, 0f, 90f));
+                                Transform iC = Instantiate(insideCorner, transform.position = new Vector3((col*-1 + 14), (row - 14), 0), transform.rotation);
                                 iC.transform.localScale = new Vector3(transform.localScale.x, transform.localScale.y*-1, transform.localScale.z);
                             }
                             break;
@@ -1380,19 +1378,20 @@ public class LevelGenerator : MonoBehaviour
                             break;
                         case 4:
                             if(col == 7 || col == 13)
-                                Instantiate(insideWall, transform.position = new Vector3((col*-1 + 14), (row - 14), 0), transform.rotation);
+                                Instantiate(insideWall, transform.position = new Vector3((col*-1 + 14), (row - 14), 0), Quaternion.Euler(0f, 0f, 180f));
                             else
                                 Instantiate(insideWall, transform.position = new Vector3((col*-1 + 14), (row - 14), 0), Quaternion.Euler(0f, 0f, -90f));
                             break;
                         case 3:
                             if(col == 11)
                             {
-                                Transform iC = Instantiate(insideCorner, transform.position = new Vector3((col*-1 + 14), (row - 14), 0), Quaternion.Euler(0f, 0f, 180f));
+                                Transform iC = Instantiate(insideCorner, transform.position = new Vector3((col*-1 + 14), (row - 14), 0), Quaternion.Euler(0f, 0f, -90f));
                                 iC.transform.localScale = new Vector3(transform.localScale.x, transform.localScale.y*-1, transform.localScale.z);
                             }
                             else
                             {
-                                Instantiate(insideCorner, transform.position = new Vector3((col*-1 + 14), (row - 14), 0), Quaternion.Euler(0f, 0f, 0f));
+                                Transform iC = Instantiate(insideCorner, transform.position = new Vector3((col*-1 + 14), (row - 14), 0), Quaternion.Euler(0f, 0f, 180f));
+                                iC.transform.localScale = new Vector3(transform.localScale.x, transform.localScale.y*-1, transform.localScale.z);
                             }
                             break;
                     }
@@ -1411,9 +1410,9 @@ public class LevelGenerator : MonoBehaviour
                             break;
                         case 4:
                             if(col == 7)
-                                Instantiate(insideWall, transform.position = new Vector3((col*-1 + 14), (row - 14), 0), transform.rotation);
-                            else
                                 Instantiate(insideWall, transform.position = new Vector3((col*-1 + 14), (row - 14), 0), Quaternion.Euler(0f, 0f, 180f));
+                            else
+                                Instantiate(insideWall, transform.position = new Vector3((col*-1 + 14), (row - 14), 0), transform.rotation);
                             break;
                     }
                 }
@@ -1431,14 +1430,14 @@ public class LevelGenerator : MonoBehaviour
                             break;
                         case 4:
                             if(col == 7)
-                                Instantiate(insideWall, transform.position = new Vector3((col*-1 + 14), (row - 14), 0), transform.rotation);
-                            else if(col == 8)
                                 Instantiate(insideWall, transform.position = new Vector3((col*-1 + 14), (row - 14), 0), Quaternion.Euler(0f, 0f, 180f));
+                            else if(col == 8)
+                                Instantiate(insideWall, transform.position = new Vector3((col*-1 + 14), (row - 14), 0), transform.rotation);
                             else
                                 Instantiate(insideWall, transform.position = new Vector3((col*-1 + 14), (row - 14), 0), Quaternion.Euler(0f, 0f, 90f));
                             break;
                         case 3:
-                            Transform iC = Instantiate(insideCorner, transform.position = new Vector3((col*-1 + 14), (row - 14), 0), transform.rotation);
+                            Transform iC = Instantiate(insideCorner, transform.position = new Vector3((col*-1 + 14), (row - 14), 0), Quaternion.Euler(0f, 0f, 90f));
                             iC.transform.localScale = new Vector3(transform.localScale.x, transform.localScale.y*-1, transform.localScale.z);
                             break;
                     }
@@ -1451,7 +1450,7 @@ public class LevelGenerator : MonoBehaviour
                             Instantiate(outsideWall, transform.position = new Vector3((col*-1 + 14), (row - 14), 0), Quaternion.Euler(0f, 0f, 90f));
                             break;
                         case 1:
-                            Transform oC = Instantiate(outsideCorner, transform.position = new Vector3((col*-1 + 14), (row - 14), 0), Quaternion.Euler(0f, 0f, -180f));
+                            Transform oC = Instantiate(outsideCorner, transform.position = new Vector3((col*-1 + 14), (row - 14), 0), Quaternion.Euler(0f, 0f, -90f));
                             oC.transform.localScale = new Vector3(transform.localScale.x, transform.localScale.y*-1, transform.localScale.z);
                             break;
                         case 5:
@@ -1460,19 +1459,18 @@ public class LevelGenerator : MonoBehaviour
                         case 3:
                             if(col == 7)
                             {
-                                Transform iC = Instantiate(insideCorner, transform.position = new Vector3((col*-1 + 14), (row - 14), 0), Quaternion.Euler(0f, 0f, -90f));
+                                Transform iC = Instantiate(insideCorner, transform.position = new Vector3((col*-1 + 14), (row - 14), 0), Quaternion.Euler(0f, 0f, 180f));
                                 iC.transform.localScale = new Vector3(transform.localScale.x, transform.localScale.y*-1, transform.localScale.z);
                             }
                             if(col == 8)
                             {
-                                Transform iC = Instantiate(insideCorner, transform.position = new Vector3((col*-1 + 14), (row - 14), 0), Quaternion.Euler(0f, 0f, 180f));
-                                iC.transform.localScale = new Vector3(transform.localScale.x, transform.localScale.y*-1, transform.localScale.z);
+                                Transform iC = Instantiate(insideCorner, transform.position = new Vector3((col*-1 + 14), (row - 14), 0), transform.rotation);
                             }
                             break;
                         case 0:
                             break;
                         case 4:
-                            Instantiate(insideWall, transform.position = new Vector3((col*-1 + 14), (row - 14), 0), transform.rotation);
+                            Instantiate(insideWall, transform.position = new Vector3((col*-1 + 14), (row - 14), 0), Quaternion.Euler(0f, 0f, 180f));
                             break;
                     }
                 }
