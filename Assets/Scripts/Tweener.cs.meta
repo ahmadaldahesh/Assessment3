@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: 7f4f8b8918f9deb45aedb15476c49495
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - quacman: {fileID: 8035482798001558590, guid: f7f826e86cf72904c8caf126d74e59c9,
+      type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
